@@ -1,48 +1,26 @@
 # My Skills Repository
 
-A collection of reusable skills for Claude and GitHub Copilot CLI.
+A collection of reusable skills for LLM-powered development environments.
 
 ## Overview
 
-This repository contains custom skills that extend AI capabilities with specialized workflows and domain expertise.
+This repository contains custom skills that extend AI capabilities with specialized workflows and domain expertise. Compatible with various LLM platforms and development tools.
 
-## Installation
+## How to Use My Skills
 
-Skills can be installed in several ways:
+Clone or download this repository, then move the desired skill folder into your LLM environment's skills directory.
 
-### GitHub Skills Directory (Cloud-based)
-Add this repository URL to your GitHub Skills settings to make all skills available in GitHub Copilot CLI and Claude.ai:
-```
-https://github.com/Tobitap04/skills.git
-```
+### Global Skills Directories
+- `~/.agents/skills/`
+- `~/.claude/skills/`
+- `~/.copilot/skills/`
 
-### Local Installation for Claude Code
-**macOS/Linux:**
-```bash
-mkdir -p ~/.claude/skills
-cp -r <skill-folder> ~/.claude/skills/
-```
+### Project-Specific Skills Directories
+- `.agents/skills/`
+- `.claude/skills/`
+- `.github/skills/`
 
-**Windows:**
-```bash
-mkdir -p %APPDATA%\Claude\skills
-xcopy <skill-folder> %APPDATA%\Claude\skills\ /E /I
-```
-
-### Local Installation for GitHub Copilot CLI
-**macOS/Linux:**
-```bash
-mkdir -p ~/.agents/skills
-cp -r <skill-folder> ~/.agents/skills/
-```
-
-**Windows:**
-```bash
-mkdir -p %USERPROFILE%\.agents\skills
-xcopy <skill-folder> %USERPROFILE%\.agents\skills\ /E /I
-```
-
-## Available Skills
+Simply move the skill folder into one of these directories and restart your LLM application.
 
 ### RemNote Flashcard Generator
 **Folder:** `remnote-flashcard-generator/`
