@@ -8,19 +8,19 @@ This repository contains custom skills that extend AI capabilities with speciali
 
 ## How to Use My Skills
 
-Clone or download this repository, then move the desired skill folder into your LLM environment's skills directory.
+Clone or download this repository, then move the desired skill folder into your LLM environment's skills directory. Restart your LLM application afterwards before accessing the skill.
 
-### Global Skills Directories
+**Global Skills Directories:**
 - `~/.agents/skills/`
 - `~/.claude/skills/`
 - `~/.copilot/skills/`
 
-### Project-Specific Skills Directories
+**Project-Specific Skills Directories:**
 - `.agents/skills/`
 - `.claude/skills/`
 - `.github/skills/`
 
-Simply move the skill folder into one of these directories and restart your LLM application.
+## Overview of My Skills
 
 ### RemNote Flashcard Generator
 **Folder:** `remnote-flashcard-generator/`
