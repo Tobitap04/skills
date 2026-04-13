@@ -35,7 +35,7 @@ Your flashcards must follow these evidence-based best practices:
    - ✅ "How does **SMAC** work?"
    - ❌ "What is Information Gain in feature selection?"
 
-10. **Concise Basic Answers** - For basic Q&A cards (>>), keep answers SHORT. If an answer requires more than ~15 words, either:
+10. **Concise Basic Answers** - For basic Q&A cards (>>), keep answers SHORT. If an answer requires more than ~10 words, either:
     - Convert to multi-line card (>>>)
     - Split into multiple cards
     - ❌ "Removes features with highly skewed value distributions, eliminating both very high frequency features (e.g., 'the', 'and') and very low frequency features"
@@ -55,7 +55,7 @@ Your flashcards must follow these evidence-based best practices:
 
 ## Input Handling
 
-You'll receive one or more of:
+You will receive input in one of the following formats:
 
 ### PDF Only
 Extract text from the PDF, identify main topics and exam-relevant concepts, generate comprehensive flashcard coverage. Focus on definitions, algorithms, properties, trade-offs, and computational complexity—skip trivial details like author birth dates or historical anecdotes unless exam-relevant.
@@ -75,7 +75,6 @@ Your job:
 4. **Enhance answers** - Expand partial notes into complete, formatted answers using bullet points
 5. **Preserve structure** - Maintain the H2/H4 heading hierarchy
 6. **Fill gaps** - Add missing questions if the existing ones don't cover all important aspects of the topic
-7. **Filter excessive questions** - If notes contain >50 questions, prioritize the most exam-relevant ones and consolidate/remove redundant or trivial questions
 
 ### PDF + Notes (Combined)
 Use the PDF as the authoritative source:
@@ -85,8 +84,7 @@ Use the PDF as the authoritative source:
 4. Improve question wording using PDF terminology
 5. Complete/enhance answers using PDF content
 6. **Only add new questions if critical topics are missing** - be conservative
-7. **Filter if excessive** - If >50 questions total, prioritize exam-relevant ones
-8. Improve heading/subheading wording if needed for clarity
+7. Improve heading/subheading wording if needed for clarity
 
 **Important**: 
 - When both are provided, the PDF is ground truth for content
@@ -98,18 +96,11 @@ Use the PDF as the authoritative source:
 **BE CONSERVATIVE**. Quality matters far more than quantity.
 
 ### PDF-Only Input
-Target **10-40 cards** depending on:
-- **Simple/sparse content** (20-30 slides, few topics): 10-15 cards
-- **Medium content** (40-60 slides): 15-25 cards
-- **Dense content** (80-100 slides, many algorithms): 25-40 cards
-- **Large but sparse** (100 slides, mostly examples): 15-20 cards
+Target to cover all exam-relevant concepts. 
 
 ### Notes-Only or Notes+PDF Input
 **First consolidate, then add carefully**:
 - **Consolidate redundant questions** - Merge similar questions scattered throughout notes
-- **Filter if excessive** - If >50 questions after consolidation, prioritize most exam-relevant
-- **Maximum +33% additional cards** on top of consolidated user questions (unless user specifies otherwise)
-- Example: User has 15 unique questions after consolidation → add at most 5 new cards (total: 20)
 - Only add if there's a **critical gap** the user's questions don't cover
 - If user's notes already comprehensively cover the topic, add nothing
 
@@ -121,7 +112,7 @@ Target **10-40 cards** depending on:
 **Avoid long cards**:
 - Multi-line answers: max 5 bullet points
 - Numbered lists: max 5 items
-- Basic Q&A: max ~15 words in answer
+- Basic Q&A: max ~10 words in answer
 - If a concept requires more, split into multiple related cards
 
 ## RemNote Card Type Selection
@@ -305,14 +296,12 @@ Before outputting, verify each card:
 - ✅ Tests understanding, not recognition (active recall)
 - ✅ Has context (no orphans)
 - ✅ Question is complete sentence with **bold keyword**
-- ✅ Answer is concise (basic Q&A ≤15 words, multi-line ≤5 bullets)
+- ✅ Answer is concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - ✅ Formatting applied correctly
 - ✅ Exam-relevant (not trivial)
 - ✅ **Definition comes before related questions** (reorder if needed)
 - ✅ **Overview question before individual method questions** (for multiple methods)
 - ✅ **Redundant questions consolidated** (merge similar questions scattered in notes)
-- ✅ **Excessive questions filtered** (if >50 total, prioritize exam-relevant)
-- ✅ **Card count within limits** (notes+PDF: max +33% new cards; PDF-only: 10-40)
 
 ### Step 4: Output Format
 
@@ -421,9 +410,9 @@ Note: Keep answers SHORT for basic Q&A cards.
 **Input (from notes)**:
 ```
 - Filter methods
-    - How does Information Gain Filtering work?
-    - 
+    - Information Gain Filtering
     - How does Frequency Filtering work?
+    - What is Markov Blanket Filtering?
 ```
 
 **Output (with PDF context)**:
@@ -436,16 +425,17 @@ Note: Keep answers SHORT for basic Q&A cards.
           - Markov Blanket Filtering
         - How does **Frequency Filtering** work? >> Removes features with extreme occurrence frequencies
         - How does **Information Gain** filtering work? >> Selects features maximizing $I(X; Y)$ between feature and target
+        - How does **Markov Blanket** filtering work? >> Selects features in the Markov blanket of the target variable, making it conditionally independent of all others
 ```
 
 **Rationale**:
 - **Definition first**: Added "What are Filter methods?" before the how-to questions
 - **Overview before details**: Added "What are the main filter techniques?" listing all methods
-- **Preserved user's questions**: Both original questions kept and refined
+- **Preserve and refine user's questions**: All original questions kept and refined
 - **Concise answers**: Short answers for basic Q&A (no long sentences)
 - **Bold keywords**: Main concept bolded in each question
-- **Card count**: Added 2 cards (+33%) to cover definition and overview
-- Proper indentation: H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
+- **Card count**: Added 2 cards to cover definition and overview
+- **Proper indentation**: H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
 
 ## Anti-Patterns to Avoid
 
@@ -469,22 +459,21 @@ Note: Keep answers SHORT for basic Q&A cards.
 Before finalizing output:
 
 - [ ] All questions are complete sentences with **bold keyword**
-- [ ] All answers are concise (basic Q&A ≤15 words, multi-line ≤5 bullets)
+- [ ] All answers are concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - [ ] One fact per card (NO compound questions like "What are X and Y?")
 - [ ] **Redundant questions consolidated** (merge similar questions from notes)
-- [ ] **Excessive questions filtered** (if >50 total, keep most exam-relevant)
 - [ ] **Definitions come BEFORE related questions** (reorder if needed)
 - [ ] **Overview questions BEFORE individual method questions** (for multiple methods)
 - [ ] Algorithm steps use `>>1.` (ordered), properties use `>>>` (unordered)
 - [ ] Visual formatting: **bold**, `__italic__`, `code`, LaTeX
 - [ ] No punctuation directly after closing `__italic__` (place a normal word first)
+- [ ] No use of bold with inline code (use either bold OR code, not both)
 - [ ] Correct indentation: H2 (0), H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
 - [ ] Exactly 2 additional spaces before nested bullets
 - [ ] NO blank lines between cards or after headings
 - [ ] NO trailing blank line at end of output
 - [ ] H2/H4 structure preserved
-- [ ] **Card count within limits**: notes+PDF → max +33% new cards; PDF-only → 10-40 cards
 - [ ] When refining notes: ALL user's questions preserved and improved (after consolidation)
 - [ ] No trivial facts (author birth dates, etc.)
 - [ ] Output is in English
