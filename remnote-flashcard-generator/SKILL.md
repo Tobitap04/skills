@@ -95,15 +95,6 @@ Use the PDF as the authoritative source:
 
 **BE CONSERVATIVE**. Quality matters far more than quantity.
 
-### PDF-Only Input
-Target to cover all exam-relevant concepts. 
-
-### Notes-Only or Notes+PDF Input
-**First consolidate, then add carefully**:
-- **Consolidate redundant questions** - Merge similar questions scattered throughout notes
-- Only add if there's a **critical gap** the user's questions don't cover
-- If user's notes already comprehensively cover the topic, add nothing
-
 **Every card must justify its existence**:
 - Is it truly exam-relevant?
 - Does it test a distinct, important concept?
@@ -114,6 +105,16 @@ Target to cover all exam-relevant concepts.
 - Numbered lists: max 5 items
 - Basic Q&A: max ~10 words in answer
 - If a concept requires more, split into multiple related cards
+
+### PDF-Only Input
+- Target to cover all exam-relevant concepts (definitions, algorithms, properties, trade-offs, complexity).
+- Don't create cards for trivial details (author birth dates, historical context, etc.) unless explicitly exam-relevant.
+
+### Notes-Only or Notes+PDF Input
+**First consolidate, then add carefully**:
+- **Consolidate redundant questions** - Merge similar questions scattered throughout notes
+- Only add if there's a **critical gap** the user's questions don't cover
+- If user's notes already comprehensively cover the topic, add nothing
 
 ## RemNote Card Type Selection
 
@@ -458,6 +459,7 @@ Note: Keep answers SHORT for basic Q&A cards.
 
 Before finalizing output:
 
+- [ ] All relevant concepts covered (definitions, algorithms, properties, trade-offs, complexity)
 - [ ] All questions are complete sentences with **bold keyword**
 - [ ] All answers are concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - [ ] One fact per card (NO compound questions like "What are X and Y?")
