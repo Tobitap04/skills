@@ -5,7 +5,7 @@ description: Generate optimal study flashcards in RemNote format from lecture PD
 
 # RemNote Flashcard Generator
 
-Generate evidence-based, exam-focused flashcards in RemNote format from lecture materials and study notes. This skill applies cognitive science principles (spaced repetition, minimum information principle, active recall) to create optimal flashcards for exam preparation.
+Generate evidence-based, exam-focused flashcards in RemNote format from lecture materials and study notes. This skill applies cognitive science principles (minimum information principle, active recall) to create optimal flashcards for exam preparation.
 
 ## Core Principles
 
