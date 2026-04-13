@@ -215,6 +215,10 @@ Apply consistently:
 - LaTeX (`$formula$`) - Equations, complexity notation (`$O(n^2)$`, `$\sum_{i=1}^{n} i$`)
 
 **IMPORTANT RemNote Syntax**:
+- **Inline code cannot be made bold** - Do not attempt to combine bold and code formatting (e.g., `**"Host"**` won't work). Use either bold OR code, not both:
+  - ✅ `"Host"` (inline code)
+  - ✅ **Host** (bold)
+  - ❌ `**"Host"**` (won't render correctly)
 - Italic: `__text__` (double underscore, NO extra spaces)
 - For italic, do **not** place punctuation immediately after closing `__`. Place a normal word first, then punctuation.
   - ✅ `__term__ is important.`
