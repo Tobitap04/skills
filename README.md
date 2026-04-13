@@ -21,7 +21,7 @@ Clone or download this repository, then move the desired skill folder into your 
 ### RemNote Flashcard Generator
 **Folder:** `remnote-flashcard-generator/`
 
-Generate optimal flashcards in RemNote format from lecture PDFs and study notes for computer science topics. Applies evidence-based learning principles to create effective study decks. Supports PDF-only input, notes-only refinement, or combined processing with intelligent consolidation of redundant questions.
+Generate optimal flashcards in RemNote format from lecture PDFs and study notes. Applies evidence-based learning principles to create effective study decks. Supports PDF-only input, notes-only refinement, or combined processing with intelligent consolidation of redundant questions.
 
 **Use Case:** Convert lectures and notes into RemNote-compatible flashcards with proper formatting, definitions-first ordering, and exam-focused content.
 
