@@ -1,9 +1,5 @@
 # My Skills Repository
 
-A collection of reusable skills for LLM-powered development environments.
-
-## Overview
-
 This repository contains custom skills that extend AI capabilities with specialized workflows and domain expertise. Compatible with various LLM platforms and development tools.
 
 ## How to Use My Skills
