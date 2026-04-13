@@ -1,11 +1,11 @@
 ---
 name: remnote-flashcard-generator
-description: Generate optimal computer science flashcards in RemNote format from lecture PDFs and/or existing study notes. Use when the user asks to create flashcards, convert lecture materials to RemNote format, generate study cards from PDFs or notes, or refine existing RemNote questions. Handles both scenarios - PDF-only input, notes-only input, or combined PDF+notes where the PDF serves as the authoritative source for refinement and gap-filling.
+description: Generate optimal study flashcards in RemNote format from lecture PDFs and/or existing study notes. Use when the user asks to create flashcards, convert lecture materials to RemNote format, generate study cards from PDFs or notes, or refine existing RemNote questions. Handles both scenarios - PDF-only input, notes-only input, or combined PDF+notes where the PDF serves as the authoritative source for refinement and gap-filling.
 ---
 
 # RemNote Flashcard Generator
 
-Generate evidence-based, exam-focused flashcards in RemNote format from lecture materials and study notes. This skill applies cognitive science principles (spaced repetition, minimum information principle, active recall) to create optimal flashcards for computer science learning.
+Generate evidence-based, exam-focused flashcards in RemNote format from lecture materials and study notes. This skill applies cognitive science principles (spaced repetition, minimum information principle, active recall) to create optimal flashcards for exam preparation.
 
 ## Core Principles
 
