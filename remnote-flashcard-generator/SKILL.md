@@ -21,7 +21,7 @@ Your flashcards must follow these evidence-based best practices:
 
 5. **Preserve Existing Questions** - When refining notes, keep the user's questions and improve them. Don't replace or omit their questions - they chose those topics for a reason.
 
-6. **Visual Formatting Enhances Retention** - Use **bold** for key terms, `inline code` for function names/syntax, and LaTeX for equations. DO NOT use italic (RemNote doesn't support it).
+6. **Visual Formatting Enhances Retention** - Use **bold** for key terms, `inline code` for function names/syntax, LaTeX for equations, and italic only with `__text__` (never `*text*`).
 
 7. **Definition First** - Always place the definition of a concept BEFORE any follow-up questions about it. If user's notes have questions in the "wrong" order (e.g., "How does X work?" before "What is X?"), reorder them so the definition comes first.
 
@@ -216,6 +216,9 @@ Apply consistently:
 
 **IMPORTANT RemNote Syntax**:
 - Italic: `__text__` (double underscore, NO extra spaces)
+- For italic, do **not** place punctuation immediately after closing `__`. Place a normal word first, then punctuation.
+  - ✅ `__term__ is important.`
+  - ❌ `__term__.`
 - Underline: `  _text_  ` (single underscore with 2 spaces before and after)
 - Do NOT use `*text*` for italic - it doesn't work in RemNote!
 
@@ -329,7 +332,8 @@ Structure the output as valid RemNote import with proper indentation:
 4. **Exactly 2 additional spaces** before nested bullets (relative to card)
 5. **No markdown code fences** around output
 6. **Use `__text__` for italic** (NOT `*text*` - doesn't work in RemNote)
-7. **No trailing blank line** at end of output
+7. **After `__italic__`, put a normal word before punctuation** (NOT `__term__.`)
+8. **No trailing blank line** at end of output
 
 ## Common CS Flashcard Patterns
 
@@ -469,6 +473,7 @@ Before finalizing output:
 - [ ] **Overview questions BEFORE individual method questions** (for multiple methods)
 - [ ] Algorithm steps use `>>1.` (ordered), properties use `>>>` (unordered)
 - [ ] Visual formatting: **bold**, `__italic__`, `code`, LaTeX
+- [ ] No punctuation directly after closing `__italic__` (place a normal word first)
 - [ ] Correct indentation: H2 (0), H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
 - [ ] Exactly 2 additional spaces before nested bullets
