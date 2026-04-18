@@ -208,7 +208,7 @@ Apply consistently:
 - LaTeX (`$formula$`) - Equations, complexity notation (`$O(n^2)$`, `$\sum_{i=1}^{n} i$`)
 
 **IMPORTANT RemNote Syntax**:
-- **Inline code cannot be made bold** - Do not attempt to combine bold and code formatting (e.g., **`func(x)`** won't work). Use either bold OR code, not both:
+- **Inline code cannot be made bold** - Do not attempt to combine bold and code formatting (e.g., **`func(x)`** or **`%%`** won't work). Use either bold OR code, not both:
   - ✅ `func(x)` (inline code)
   - ✅ **Host** (bold)
   - ❌ **`func(x)`** (won't render correctly)
@@ -334,9 +334,8 @@ Structure the output as valid RemNote import with proper indentation:
 5. **Exactly 2 additional spaces** before nested bullets (relative to card)
 6. **No markdown code fences** around output
 7. **Use `__text__` for italic** (NOT `*text*` - doesn't work in RemNote)
-8. **After `__italic__`, put a normal word before punctuation** (NOT `__term__.`)
-9. **Don't use inline code with bold formatting** (NOT **`func(x)`**)
-10. **No trailing blank line** at end of output
+8. **After `__italic__`, use a word — not punctuation** (NOT `__term__.`)
+9. **Don't use inline code with bold formatting** (NOT **`func(x)`** or **`%%`**)
 
 ## Common Flashcard Patterns
 
@@ -480,12 +479,11 @@ Before finalizing output:
 - [ ] **Overview questions BEFORE individual method questions** (for multiple methods)
 - [ ] Algorithm steps use `>>1.` (ordered), properties use `>>>` (unordered)
 - [ ] Visual formatting: **bold**, `__italic__`, `code`, LaTeX
-- [ ] No punctuation (e.g., ';',',','.','?','!') directly after closing `__italic__` (there must be one space after the closing __)
-- [ ] No use of inline code with bold formatting. If it occurs, remove the bold formatting (even if it is the question keyword)
-- [ ] Correct indentation: H2 (0), H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
+- [ ] NO punctuation (e.g., ';',',','.','?','!') directly after closing `__italic__` (there must be one space after the closing __)
+- [ ] NO use of inline code with bold formatting. Remove any bold formating from inline code!
+- [ ] Correct indentation: maximum nesting level: H2 / H4 / flashcard
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
 - [ ] Exactly 2 additional spaces before nested bullets
-- [ ] NO more then 10 spaces indentation
 - [ ] NO blank lines
 - [ ] H2/H4 structure preserved
 - [ ] When refining notes: ALL user's questions preserved and improved (after consolidation)
