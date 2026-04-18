@@ -71,7 +71,7 @@ The notes are structured hierarchically with bullets:
 
 Your job:
 1. **Consolidate redundant questions** - Look for duplicate or very similar questions scattered throughout the notes and merge them into single, well-worded questions
-2. **Complete empty answers** - Fill in based on your CS knowledge
+2. **Complete empty answers** - Fill in based on your knowledge
 3. **Refine questions** - Convert fragments to complete, grammatically correct sentences
 4. **Enhance answers** - Expand partial notes into complete, formatted answers using bullet points
 5. **Preserve structure** - Maintain the H2/H4 heading hierarchy
@@ -234,7 +234,7 @@ Apply consistently:
 - **Answers**: Can be bullet points/fragments (concise, not full sentences)
   - ✅ "All configurations considered"
   - ✅ "Massively parallelizable"
-- **Terminology**: Use standard CS terminology from the lecture/PDF when available
+- **Terminology**: Use standard terminology from the lecture/PDF when available
 
 ## Heading Structure
 
@@ -336,7 +336,7 @@ Structure the output as valid RemNote import with proper indentation:
 8. **Don't use inline code with bold formatting** (NOT **`func(x)`**)
 9. **No trailing blank line** at end of output
 
-## Common CS Flashcard Patterns
+## Common Flashcard Patterns
 
 ### Overview Then Details Pattern (for multiple methods)
 
