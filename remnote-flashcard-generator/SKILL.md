@@ -33,7 +33,7 @@ Your flashcards must follow these evidence-based best practices:
 9. **Bold Keywords in Questions** - ALWAYS make the main keyword/concept in each question **bold**:
    - ✅ "What is **Information Gain** in feature selection?"
    - ✅ "How does **SMAC** work?"
-   - ✅ "What is the default behavior of `sample(x)`?" (Use of inline code is the only exception)
+   - ✅ "What is the default behavior of `sample(x)`?" (Use of inline  is the only exception)
    - ❌ "What is Information Gain in feature selection?"
 
 10. **Concise Basic Answers** - For basic Q&A cards (>>), keep answers SHORT. If an answer requires more than ~10 words, either:
@@ -299,7 +299,7 @@ Before outputting, verify each card:
 - ✅ One fact per card (minimum information principle)
 - ✅ Tests understanding, not recognition (active recall)
 - ✅ Has context (no orphans)
-- ✅ Question is complete sentence with **bold keyword** (exception: if the keyword itself is an inline code block)
+- ✅ Question is complete sentence with **bold keyword** (exception: if the keyword itself is inline code)
 - ✅ Answer is concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - ✅ Formatting applied correctly
 - ✅ Exam-relevant (not trivial)
@@ -471,7 +471,7 @@ Note: Keep answers SHORT for basic Q&A cards.
 Before finalizing output:
 
 - [ ] All relevant concepts covered (definitions, algorithms, properties, trade-offs, complexity)
-- [ ] All questions are complete sentences with **bold keyword** (exception: if the keyword itself is an inline code block)
+- [ ] All questions are complete sentences with **bold keyword** (exception: if the keyword itself is inline code)
 - [ ] All answers are concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - [ ] One fact per card (NO compound questions like "What are X and Y?")
 - [ ] **Redundant questions consolidated** (merge similar questions from notes)
