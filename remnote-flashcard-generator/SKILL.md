@@ -222,7 +222,7 @@ Apply consistently:
 **Example with full formatting**:
 
 ```
-        - What is the **Bellman-Ford Algorithm** used for? >> Finding __shortest paths__ in graphs with **negative edge weights**, running in $O(V \cdot E)$ time
+- What is the **Bellman-Ford Algorithm** used for? >> Finding __shortest paths__ in graphs with **negative edge weights**, running in $O(V \cdot E)$ time
 ```
 
 ## Language and Wording
