@@ -479,7 +479,7 @@ Before finalizing output:
 - [ ] **Overview questions BEFORE individual method questions** (for multiple methods)
 - [ ] Algorithm steps use `>>1.` (ordered), properties use `>>>` (unordered)
 - [ ] Visual formatting: **bold**, `__italic__`, `code`, LaTeX
-- [ ] NO punctuation (e.g., ';',',','.','?','!') directly after closing `__italic__` (there must be one space after the closing __)
+- [ ] NO punctuation (e.g., ';',',','.','?','!') directly after closing `__italic__` (there must be one word after the closing __)
 - [ ] NO use of inline code with bold formatting. Remove any bold formating from inline code!
 - [ ] Correct indentation: maximum nesting level: H2 / H4 / flashcard
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
