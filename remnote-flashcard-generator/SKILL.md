@@ -33,6 +33,7 @@ Your flashcards must follow these evidence-based best practices:
 9. **Bold Keywords in Questions** - ALWAYS make the main keyword/concept in each question **bold**:
    - ✅ "What is **Information Gain** in feature selection?"
    - ✅ "How does **SMAC** work?"
+   - ✅ "What is the default behavior of `sample(x)`?" (Use of inline code is the only exception)
    - ❌ "What is Information Gain in feature selection?"
 
 10. **Concise Basic Answers** - For basic Q&A cards (>>), keep answers SHORT. If an answer requires more than ~10 words, either:
@@ -207,10 +208,10 @@ Apply consistently:
 - LaTeX (`$formula$`) - Equations, complexity notation (`$O(n^2)$`, `$\sum_{i=1}^{n} i$`)
 
 **IMPORTANT RemNote Syntax**:
-- **Inline code cannot be made bold** - Do not attempt to combine bold and code formatting (e.g., `**"Host"**` won't work). Use either bold OR code, not both:
-  - ✅ `"Host"` (inline code)
+- **Inline code cannot be made bold** - Do not attempt to combine bold and code formatting (e.g., **`func(x)`** won't work). Use either bold OR code, not both:
+  - ✅ `func(x)` (inline code)
   - ✅ **Host** (bold)
-  - ❌ `**"Host"**` (won't render correctly)
+  - ❌ **`func(x)`** (won't render correctly)
 - Italic: `__text__` (double underscore, NO extra spaces)
 - For italic, do **not** place punctuation immediately after closing `__`. Place a normal word first, then punctuation.
   - ✅ `__term__ is important.`
@@ -241,6 +242,7 @@ Preserve the hierarchical structure from input with proper indentation:
 
 ```
 ## Feature Selection
+    - What is **Feature Selection**? >> Identifying and keeping only the most informative features from a dataset
     #### Filter Methods
         - What is Information Gain filtering? >> Selects features maximizing $I(X; Y)$
         - What is Frequency Filtering? >> Selects features based on occurrence counts
@@ -253,9 +255,9 @@ Preserve the hierarchical structure from input with proper indentation:
 **Indentation Rules**:
 - **H2 (`##`)** - No indentation (left-aligned)
 - **H4 (`####`)** - 4 spaces indentation (under H2)
-- **Cards** - 8 spaces indentation (under H4)
-- **Bullets** - 10 spaces indentation (under card question)
-- **NO blank lines** between headings and cards
+- **Cards** - 4 spaces indentation (under H2), 8 spaces indentation (under H4)
+- **Bullets** - 6 spaces indentation (under card question in H2), 10 spaces indentation (under card question in H4)
+- **NO blank lines**
 
 ## Workflow
 
@@ -296,7 +298,7 @@ Before outputting, verify each card:
 - ✅ One fact per card (minimum information principle)
 - ✅ Tests understanding, not recognition (active recall)
 - ✅ Has context (no orphans)
-- ✅ Question is complete sentence with **bold keyword**
+- ✅ Question is complete sentence with **bold keyword** (exception: if the keyword itself is an inline code block)
 - ✅ Answer is concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - ✅ Formatting applied correctly
 - ✅ Exam-relevant (not trivial)
@@ -310,24 +312,29 @@ Structure the output as valid RemNote import with proper indentation:
 
 ```
 ## Topic Name
+    - Question text >> Answer text
+        - Another question >>>
+          - Bullet point one
+          - Bullet point two
     #### Subtopic
         - Question text >> Answer text
         - Another question >>>
           - Bullet point one
           - Bullet point two
     #### Another Subtopic
-        - Next question >> Answer
+        - Question text >> Answer text
 ```
 
 **CRITICAL FORMATTING RULES**:
 1. **No blank lines** between cards or after headings
-2. **Proper indentation**: H2 (0), H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
+2. **Proper indentation**: H2 (0), H4 (4 spaces), cards (4 spaces when part of H2, 8 spaces when part of H4), bullets (6 spaces when part of H2, 10 spaces when part of H4)
 3. **Dash before every question** (even basic Q&A)
 4. **Exactly 2 additional spaces** before nested bullets (relative to card)
 5. **No markdown code fences** around output
 6. **Use `__text__` for italic** (NOT `*text*` - doesn't work in RemNote)
 7. **After `__italic__`, put a normal word before punctuation** (NOT `__term__.`)
-8. **No trailing blank line** at end of output
+8. **Don't use inline code with bold formatting** (NOT **`func(x)`**)
+9. **No trailing blank line** at end of output
 
 ## Common CS Flashcard Patterns
 
@@ -351,8 +358,8 @@ First the overview question listing all methods, then definition of each, then d
 ### Algorithm Complexity
 
 ```
-        - What is the time complexity of **Binary Search**? >> $O(\log n)$
-        - What is the space complexity of **Merge Sort**? >> $O(n)$
+- What is the time complexity of **Binary Search**? >> $O(\log n)$
+- What is the space complexity of **Merge Sort**? >> $O(n)$
 ```
 
 Note: Keep answers SHORT for basic Q&A cards.
@@ -360,42 +367,42 @@ Note: Keep answers SHORT for basic Q&A cards.
 ### Algorithm Steps (use >>1. for ordered sequences!)
 
 ```
-        - How does **Forward Selection** work? >>1.
-          - Start with empty set $F = \emptyset$
-          - Select best feature $X_r$
-          - Add if improves score
-          - Repeat until convergence
+- How does **Forward Selection** work? >>1.
+  - Start with empty set $F = \emptyset$
+  - Select best feature $X_r$
+  - Add if improves score
+  - Repeat until convergence
 ```
 
 ### Algorithm Properties (unordered)
 
 ```
-        - What are properties of **Depth-First Search**? >>>
-          - Uses stack or recursion
-          - Not necessarily shortest path
-          - $O(V + E)$ time complexity
-          - Can detect cycles
+- What are properties of **Depth-First Search**? >>>
+  - Uses stack or recursion
+  - Not necessarily shortest path
+  - $O(V + E)$ time complexity
+  - Can detect cycles
 ```
 
 ### Trade-offs (can use multi-line for clarity)
 
 ```
-        - What is the trade-off between **Hash Tables** and **BSTs**? >>>
-          - Hash tables: $O(1)$ average lookup, no ordering
-          - BSTs: $O(\log n)$ lookup, maintains sorted order
+- What is the trade-off between **Hash Tables** and **BSTs**? >>>
+  - Hash tables: $O(1)$ average lookup, no ordering
+  - BSTs: $O(\log n)$ lookup, maintains sorted order
 ```
 
 ### Code/Syntax
 
 ```
-        - What does `malloc(size)` return in C? >> A `void*` pointer to allocated memory, or `NULL` if allocation fails
+- What does `malloc(size)` return in C? >> A `void*` pointer to allocated memory, or `NULL` if allocation fails
 ```
 
 ### Definitions (with italic)
 
 ```
-        - What is **Dynamic Programming**? >> An __optimization technique__ that breaks problems into overlapping subproblems and stores solutions
-        - {{Dynamic Programming}}{({optimization technique})} breaks problems into overlapping subproblems
+- What is **Dynamic Programming**? >> An __optimization technique__ that breaks problems into overlapping subproblems and stores solutions
+- {{Dynamic Programming}}{({optimization technique})} breaks problems into overlapping subproblems
 ```
 
 ## Edge Cases
@@ -410,14 +417,18 @@ Note: Keep answers SHORT for basic Q&A cards.
 
 **Input (from notes)**:
 ```
-- Filter methods
-    - Information Gain Filtering
-    - How does Frequency Filtering work?
-    - What is Markov Blanket Filtering?
+- Feature Selection
+    - What is Feature Selection?
+    - Filter Methods
+        - Information Gain Filtering
+        - How does Frequency Filtering work?
+        - What is Markov Blanket Filtering?
 ```
 
 **Output (with PDF context)**:
 ```
+## Feature Selection
+    - What is **Feature Selection**? >> Identifying and keeping only the most informative features from a dataset
     #### Filter Methods
         - What are **Filter** methods in feature selection? >> Methods that evaluate features using __statistical properties__ independent of the model
         - What are the main **filter** techniques? >>>
@@ -434,9 +445,8 @@ Note: Keep answers SHORT for basic Q&A cards.
 - **Overview before details**: Added "What are the main filter techniques?" listing all methods
 - **Preserve and refine user's questions**: All original questions kept and refined
 - **Concise answers**: Short answers for basic Q&A (no long sentences)
-- **Bold keywords**: Main concept bolded in each question
-- **Card count**: Added 2 cards to cover definition and overview
-- **Proper indentation**: H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
+- **Bold keywords**: Main concept bolded in each question 
+- **Proper indentation**: H2 (0 spaces), H4 (4 spaces), cards (4 or 8 spaces), bullets (6 or 10 spaces)
 
 ## Anti-Patterns to Avoid
 
@@ -460,7 +470,7 @@ Note: Keep answers SHORT for basic Q&A cards.
 Before finalizing output:
 
 - [ ] All relevant concepts covered (definitions, algorithms, properties, trade-offs, complexity)
-- [ ] All questions are complete sentences with **bold keyword**
+- [ ] All questions are complete sentences with **bold keyword** (exception: if the keyword itself is an inline code block)
 - [ ] All answers are concise (basic Q&A ≤10 words, multi-line ≤5 bullets)
 - [ ] One fact per card (NO compound questions like "What are X and Y?")
 - [ ] **Redundant questions consolidated** (merge similar questions from notes)
@@ -468,13 +478,12 @@ Before finalizing output:
 - [ ] **Overview questions BEFORE individual method questions** (for multiple methods)
 - [ ] Algorithm steps use `>>1.` (ordered), properties use `>>>` (unordered)
 - [ ] Visual formatting: **bold**, `__italic__`, `code`, LaTeX
-- [ ] No punctuation directly after closing `__italic__` (place a normal word first)
-- [ ] No use of bold with inline code (use either bold OR code, not both)
+- [ ] No punctuation (e.g., ';',',','.','?','!') directly after closing `__italic__` (place a normal word first)
+- [ ] No use of inline code with bold formatting. If it occurs, remove the bold formatting (even if it is the question keyword)
 - [ ] Correct indentation: H2 (0), H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
 - [ ] Exactly 2 additional spaces before nested bullets
-- [ ] NO blank lines between cards or after headings
-- [ ] NO trailing blank line at end of output
+- [ ] NO blank lines
 - [ ] H2/H4 structure preserved
 - [ ] When refining notes: ALL user's questions preserved and improved (after consolidation)
 - [ ] No trivial facts (author birth dates, etc.)
