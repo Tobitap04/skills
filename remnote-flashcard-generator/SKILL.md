@@ -257,6 +257,7 @@ Preserve the hierarchical structure from input with proper indentation:
 - **H4 (`####`)** - 4 spaces indentation (under H2)
 - **Cards** - 4 spaces indentation (under H2), 8 spaces indentation (under H4)
 - **Bullets** - 6 spaces indentation (under card question in H2), 10 spaces indentation (under card question in H4)
+- **Maximum indentation**: 10 spaces — Indentation must not exceed 10 spaces (maximum nesting level: H2 / H4 / flashcard)
 - **NO blank lines**
 
 ## Workflow
@@ -328,13 +329,14 @@ Structure the output as valid RemNote import with proper indentation:
 **CRITICAL FORMATTING RULES**:
 1. **No blank lines** between cards or after headings
 2. **Proper indentation**: H2 (0), H4 (4 spaces), cards (4 spaces when part of H2, 8 spaces when part of H4), bullets (6 spaces when part of H2, 10 spaces when part of H4)
-3. **Dash before every question** (even basic Q&A)
-4. **Exactly 2 additional spaces** before nested bullets (relative to card)
-5. **No markdown code fences** around output
-6. **Use `__text__` for italic** (NOT `*text*` - doesn't work in RemNote)
-7. **After `__italic__`, put a normal word before punctuation** (NOT `__term__.`)
-8. **Don't use inline code with bold formatting** (NOT **`func(x)`**)
-9. **No trailing blank line** at end of output
+3. **Maximum indentation**: 10 spaces — Indentation must not exceed 10 spaces (maximum nesting level: H2 / H4 / flashcard)
+4. **Dash before every question** (even basic Q&A)
+5. **Exactly 2 additional spaces** before nested bullets (relative to card)
+6. **No markdown code fences** around output
+7. **Use `__text__` for italic** (NOT `*text*` - doesn't work in RemNote)
+8. **After `__italic__`, put a normal word before punctuation** (NOT `__term__.`)
+9. **Don't use inline code with bold formatting** (NOT **`func(x)`**)
+10. **No trailing blank line** at end of output
 
 ## Common Flashcard Patterns
 
@@ -483,6 +485,7 @@ Before finalizing output:
 - [ ] Correct indentation: H2 (0), H4 (4 spaces), cards (8 spaces), bullets (10 spaces)
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
 - [ ] Exactly 2 additional spaces before nested bullets
+- [ ] NO more then 10 spaces indentation
 - [ ] NO blank lines
 - [ ] H2/H4 structure preserved
 - [ ] When refining notes: ALL user's questions preserved and improved (after consolidation)
