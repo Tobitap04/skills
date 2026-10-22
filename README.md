@@ -1,48 +1,86 @@
-# My Skills Repository
+# Agent Skills Collection
 
-This repository contains custom skills that extend AI capabilities with specialized workflows and domain expertise. Compatible with various LLM platforms and development tools (Claude Desktop, Cursor, VS Code / Cline, Codex, Antigravity, etc.).
+A collection of open, modular [Agent Skills](https://skills.sh) compatible with the `skills` CLI (`npx skills`) and supported across modern AI coding agents (Claude Code, Cursor, Cline, OpenCode, Codex, Antigravity, and others).
 
-## How to Use My Skills
+## Installation via `npx skills`
 
-Clone or download this repository, then move the desired skill folder into your LLM environment's skills directory. Restart your LLM application afterwards before accessing the skill.
+You can install skills directly from this repository using `npx skills`:
 
-**Global Skills Directories:**
+### Install all skills from this repository
+```bash
+npx skills add Tobitap04/skills
+```
+
+### Install a specific skill
+```bash
+# Install GitLab MCP skill
+npx skills add Tobitap04/skills --skill gitlab-mcp
+
+# Install Kleinanzeigen Assistant
+npx skills add Tobitap04/skills --skill kleinanzeigen-agent
+
+# Install RemNote Flashcard Generator
+npx skills add Tobitap04/skills --skill remnote-flashcard-generator
+```
+
+### Install globally across projects
+Add the `-g` flag to install into your global AI skills directory:
+```bash
+npx skills add Tobitap04/skills -g
+```
+
+---
+
+## Manual Installation
+
+Alternatively, clone or copy the respective skill folder from `skills/` directly into your agent's skills directory:
+
+**Global Directories:**
 - `~/.agents/skills/`
 - `~/.claude/skills/`
 - `~/.copilot/skills/`
 
-**Project-Specific Skills Directories:**
+**Project-Specific Directories:**
 - `.agents/skills/`
 - `.claude/skills/`
 - `.github/skills/`
 
-## Overview of My Skills
+---
 
-### RemNote Flashcard Generator
-**Folder:** `remnote-flashcard-generator/`
+## Available Skills
 
-Generate optimal flashcards in RemNote format from lecture PDFs and study notes. Applies evidence-based learning principles to create effective study decks. Supports PDF-only input, notes-only refinement, or combined processing with intelligent consolidation of redundant questions.
+### 1. GitLab MCP Skill
+- **Path:** `skills/gitlab-mcp/`
+- **Identifier:** `gitlab-mcp`
+- **Description:** Client-agnostic integration and automation for GitLab instances (GitLab.com and self-hosted) via Model Context Protocol (`@zereight/mcp-gitlab`). Covers multi-client configuration (Claude Desktop, Cursor, Cline, Codex, etc.), token management, and standard operating procedures for issues, merge requests, and repository queries.
 
-**Use Case:** Convert lectures and notes into RemNote-compatible flashcards with proper formatting, definitions-first ordering, and exam-focused content.
+### 2. Kleinanzeigen-Assistent
+- **Path:** `skills/kleinanzeigen-agent/`
+- **Identifier:** `kleinanzeigen-agent`
+- **Description:** Automatisierte und schrittweise Erstellung von verkaufsfertigen Kleinanzeigen-Inseraten direkt aus Produktfotos. Beinhaltet visuelle Produktidentifikation mit strukturierter Nutzerbestätigung, deutsche Gebrauchtmarkt-Preisrecherche und verkaufsfertige Anzeigentexte (inkl. 65-Zeichen-Titelbegrenzung und rechtssicherer Privatverkaufsklausel).
+
+### 3. RemNote Flashcard Generator
+- **Path:** `skills/remnote-flashcard-generator/`
+- **Identifier:** `remnote-flashcard-generator`
+- **Description:** Generates optimal flashcards in RemNote format from lecture PDFs and study notes. Applies evidence-based learning principles to create effective study decks. Supports PDF-only input, notes-only refinement, or combined processing with intelligent consolidation of redundant questions.
 
 ---
 
-### GitLab MCP Skill
-**Folder:** `gitlab-mcp/`
+## Repository Structure
 
-Universal, client-agnostic guide and automation skill for managing GitLab instances (GitLab.com and self-hosted) via Model Context Protocol (`@zereight/mcp-gitlab`). Covers multi-client configuration (Claude Desktop, Cursor, Cline, Codex, etc.), token setup, and standard operating procedures for issues, merge requests, and code inspection.
-
-**Use Case:** Integrate any GitLab repository with AI coding assistants for automated issue triage, task creation, merge request reviews, and repository queries.
+```text
+skills/
+├── skills/
+│   ├── gitlab-mcp/
+│   │   └── SKILL.md
+│   ├── kleinanzeigen-agent/
+│   │   └── SKILL.md
+│   └── remnote-flashcard-generator/
+│       └── SKILL.md
+├── README.md
+└── LICENSE
+```
 
 ---
 
-### Kleinanzeigen-Assistent
-**Folder:** `kleinanzeigen-agent/`
-
-Automatisierte und schrittweise Erstellung von verkaufsfertigen Kleinanzeigen-Inseraten direkt aus Produktfotos. Beinhaltet visuelle Produktidentifikation, strukturierte Nutzerbestätigung, deutsche Gebrauchtmarkt-Preisrecherche und SEO-optimierte Anzeigentexte (inkl. 65-Zeichen-Titelbegrenzung und rechtssicherer Privatverkaufsklausel).
-
-**Use Case:** Schnelles, chargenweises Inserieren von Gebrauchtartikeln auf Kleinanzeigen ohne manuelle Text- und Preisrecherche.
-
----
-
-**Last Updated:** Oktober 2026
+**Standards Compliance:** This repository adheres to the [skills.sh](https://skills.sh) specification.
