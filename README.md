@@ -1,6 +1,6 @@
 # My Skills Repository
 
-This repository contains custom skills that extend AI capabilities with specialized workflows and domain expertise. Compatible with various LLM platforms and development tools.
+This repository contains custom skills that extend AI capabilities with specialized workflows and domain expertise. Compatible with various LLM platforms and development tools (Claude Desktop, Cursor, VS Code / Cline, Codex, Antigravity, etc.).
 
 ## How to Use My Skills
 
@@ -27,4 +27,22 @@ Generate optimal flashcards in RemNote format from lecture PDFs and study notes.
 
 ---
 
-**Last Updated:** April 2026
+### GitLab MCP Skill
+**Folder:** `gitlab-mcp/`
+
+Universal, client-agnostic guide and automation skill for managing GitLab instances (GitLab.com and self-hosted) via Model Context Protocol (`@zereight/mcp-gitlab`). Covers multi-client configuration (Claude Desktop, Cursor, Cline, Codex, etc.), token setup, and standard operating procedures for issues, merge requests, and code inspection.
+
+**Use Case:** Integrate any GitLab repository with AI coding assistants for automated issue triage, task creation, merge request reviews, and repository queries.
+
+---
+
+### Kleinanzeigen-Assistent
+**Folder:** `kleinanzeigen-agent/`
+
+Automatisierte und schrittweise Erstellung von verkaufsfertigen Kleinanzeigen-Inseraten direkt aus Produktfotos. Beinhaltet visuelle Produktidentifikation, strukturierte Nutzerbestätigung, deutsche Gebrauchtmarkt-Preisrecherche und SEO-optimierte Anzeigentexte (inkl. 65-Zeichen-Titelbegrenzung und rechtssicherer Privatverkaufsklausel).
+
+**Use Case:** Schnelles, chargenweises Inserieren von Gebrauchtartikeln auf Kleinanzeigen ohne manuelle Text- und Preisrecherche.
+
+---
+
+**Last Updated:** Oktober 2026
