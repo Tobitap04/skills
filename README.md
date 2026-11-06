@@ -13,8 +13,8 @@ npx skills add Tobitap04/skills
 
 ### Install a specific skill
 ```bash
-# Install GitLab MCP skill
-npx skills add Tobitap04/skills --skill gitlab-mcp
+# Install GitLab Issue CLI skill
+npx skills add Tobitap04/skills --skill gitlab-issue-cli
 
 # Install Kleinanzeigen Assistant
 npx skills add Tobitap04/skills --skill kleinanzeigen-agent
@@ -49,10 +49,10 @@ Alternatively, clone or copy the respective skill folder from `skills/` directly
 
 ## Available Skills
 
-### 1. GitLab MCP Skill
-- **Path:** `skills/gitlab-mcp/`
-- **Identifier:** `gitlab-mcp`
-- **Description:** Client-agnostic integration and automation for GitLab instances (GitLab.com and self-hosted) via Model Context Protocol (`@zereight/mcp-gitlab`). Covers multi-client configuration (Claude Desktop, Cursor, Cline, Codex, etc.), token management, and standard operating procedures for issues, merge requests, and repository queries.
+### 1. GitLab Issue CLI Skill
+- **Path:** `skills/gitlab-issue-cli/`
+- **Identifier:** `gitlab-issue-cli`
+- **Description:** Installation, authentication, and issue-focused workflows for GitLab's official CLI (`glab`) on GitLab.com and self-managed instances: creating, searching, viewing, commenting on, updating, assigning, labeling, closing, and reopening issues.
 
 ### 2. Kleinanzeigen-Assistent
 - **Path:** `skills/kleinanzeigen-agent/`
@@ -71,7 +71,7 @@ Alternatively, clone or copy the respective skill folder from `skills/` directly
 ```text
 skills/
 ├── skills/
-│   ├── gitlab-mcp/
+│   ├── gitlab-issue-cli/
 │   │   └── SKILL.md
 │   ├── kleinanzeigen-agent/
 │   │   └── SKILL.md
