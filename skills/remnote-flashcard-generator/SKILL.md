@@ -206,6 +206,7 @@ Apply consistently:
 - __Italic__ (`__text__`) - Definitions, formal terminology (double underscore, no extra spaces)
 - `Inline code` (backticks) - Function names, keywords, syntax (`quickSort()`, `malloc()`, `class`)
 - LaTeX (`$formula$`) - Equations, complexity notation (`$O(n^2)$`, `$\sum_{i=1}^{n} i$`)
+- Display math (`$$...$$`) - Larger expressions, especially sums, integrals, and long formulas, on their own line for readability; retain inline math for short expressions.
 
 **IMPORTANT RemNote Syntax**:
 - **Inline code cannot be made bold** - Do not attempt to combine bold and code formatting (e.g., **`func(x)`** or **`%%`** won't work). Use either bold OR code, not both:
@@ -258,7 +259,21 @@ Preserve the hierarchical structure from input with proper indentation:
 - **Cards** - 4 spaces indentation (under H2), 8 spaces indentation (under H4)
 - **Bullets** - 6 spaces indentation (under card question in H2), 10 spaces indentation (under card question in H4)
 - **Maximum indentation**: 10 spaces — Indentation must not exceed 10 spaces (maximum nesting level: H2 / H4 / flashcard)
+- **Alignment**: Each card is indented 4 spaces farther than its heading; each answer bullet is indented 2 spaces farther than its card. Sibling headings, cards, and bullets must align with each other. Use spaces, not tabs. Preserve code-block indentation as code content.
 - **NO blank lines**
+
+Example of the required heading/card alignment:
+
+```
+## Header 2
+    - Bullet point from H2
+    #### Header 4
+        - Bullet point from H4
+        - Another Bullet point from H4
+    #### Another Header 4
+        - Bullet point from another H4
+## Another H2
+```
 
 ## Workflow
 
@@ -395,9 +410,23 @@ Note: Keep answers SHORT for basic Q&A cards.
 
 ### Code/Syntax
 
-```
-- What does `malloc(size)` return in C? >> A `void*` pointer to allocated memory, or `NULL` if allocation fails
-```
+When notes or source materials explain how to use or write a function, ask for the task/operation and provide the function or syntax in the answer. Do **not** reverse this into “What does this code/function do?” when the learning goal is how to create or use it. Prefer illustrative concrete arguments/values over generic placeholders. State the programming language where syntax could be ambiguous.
+
+Use inline code for short expressions. Use a fenced, language-tagged code block for multi-line code, including short loops and function definitions that help teach an algorithm. Keep examples minimal and syntactically valid; preserve programming-language indentation inside the block. For algorithm-learning cards, emphasize the algorithm's central idea and essential conditions, not exact index calculations, variable names, or incidental implementation details. Include indices or implementation details only when they are themselves the learning objective or needed for correctness. Concrete values should illustrate the idea, not become facts to memorize.
+
+````
+- How do you request memory for four integers in C? >> `int *values = malloc(4 * sizeof *values);`
+- How do you repeat an action twice in Python? >>>
+  - Use a loop over a range:
+    ```python
+    for _ in range(2):
+        print("Hello World")
+    ```
+- How does **Binary Search** find a target in a sorted list? >>1.
+  - Check a middle element.
+  - Discard the half that cannot contain the target.
+  - Repeat until the target is found or no candidates remain.
+````
 
 ### Definitions (with italic)
 
@@ -413,6 +442,7 @@ Note: Keep answers SHORT for basic Q&A cards.
 - **Proofs/derivations**: Focus on key steps or results, not full proof (unless explicitly exam-relevant)
 - **Historical context**: Skip unless exam-relevant
 - **Code blocks**: If >10 lines, extract key concepts rather than memorizing full code
+- **Algorithm code**: Use short, language-tagged code blocks when helpful for learning, but test the strategy rather than exact indices or incidental variable names.
 
 ## Example Transformation
 
@@ -479,11 +509,15 @@ Before finalizing output:
 - [ ] **Overview questions BEFORE individual method questions** (for multiple methods)
 - [ ] Algorithm steps use `>>1.` (ordered), properties use `>>>` (unordered)
 - [ ] Visual formatting: **bold**, `__italic__`, `code`, LaTeX
+- [ ] Use display math `$$...$$` for larger expressions such as sums and integrals; explain symbols on the same card
+- [ ] When teaching functions or syntax, ask for the task and give the code, not the reverse; include concrete example values where useful
+- [ ] Use concise, correctly indented code blocks to illustrate algorithms; test the core idea rather than memorizing incidental indices
 - [ ] NO punctuation (e.g., ';',',','.','?','!') directly after closing `__italic__` (there must be one word after the closing __)
 - [ ] NO use of inline code with bold formatting. Remove any bold formating from inline code!
 - [ ] Correct indentation: maximum nesting level: H2 / H4 / flashcard
 - [ ] Dash before EVERY card (basic Q&A, cloze, multi-line, etc.)
 - [ ] Exactly 2 additional spaces before nested bullets
+- [ ] Headings, cards, and sibling bullets are consistently aligned; code indentation is preserved inside code blocks
 - [ ] NO blank lines
 - [ ] H2/H4 structure preserved
 - [ ] When refining notes: ALL user's questions preserved and improved (after consolidation)
