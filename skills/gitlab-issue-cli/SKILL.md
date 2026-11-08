@@ -100,7 +100,7 @@ glab issue reopen 123
 
 ### Issue title and description template
 
-Preserve the project's language and conventions. Otherwise, use a concise, imperative, action-oriented title. Prefer `[Component/Scope] <Imperative verb> <target/outcome>` when a scope adds clarity, or `<Imperative verb> <target/outcome>` for a compact title:
+Always write GitLab issue content in English, regardless of the user's language or the project's usual language. This applies to issue titles, descriptions, and comments/notes. Keep communication with the user in their preferred language. Within the issue, use a concise, imperative, action-oriented title. Prefer `[Component/Scope] <Imperative verb> <target/outcome>` when a scope adds clarity, or `<Imperative verb> <target/outcome>` for a compact title:
 
 ```text
 [Component/Scope] <Imperative verb> <target/outcome>
